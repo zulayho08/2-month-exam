@@ -1,0 +1,122 @@
+@import "../colors/colors";
+
+.widget {
+  width: 1480px;
+  height: 200px;
+  background-color: $pinkColor;
+  transform: translateY(-73px);
+  background-image: url("/images/widget.png");
+  @include background();
+  background-size: auto;
+  background-position: left bottom;
+
+  &__wrapp {
+    display: flex;
+    width: 917px;
+    @include center();
+    margin-left: 250px;
+  }
+
+  &__head {
+    width: 504px;
+    font-family: Livvic;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: $darkGreen;
+  }
+
+  &__btn {
+    width: 153px;
+    height: 48px;
+    border: 2px solid $darkGreen;
+    border-radius: 25px;
+    text-align: center;
+    padding: 6px;
+  }
+
+  &__btn:active {
+    background-color: $greenDark;
+  }
+
+  &__btn--link {
+    @include link();
+    font-family: Livvic;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color: $darkGreen;
+  }
+
+  &__btn--link:active {
+    color: $whiteColor;
+  }
+}
+
+// TABLET
+
+@media only screen and (max-width: 768px) {
+  .widget {
+    width: 768px;
+    height: 200px;
+
+    background-image: url("/images/widget__bg.png");
+    @include background();
+    background-size: auto;
+    background-position: left bottom;
+
+    &__wrapp {
+      transform: translateY(30px);
+      width: 619px;
+      margin-left: 0;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &__head {
+      width: 336px;
+      font-family: Livvic;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: 0px;
+      text-align: left;
+    }
+  }
+}
+
+// MOBILE
+
+@media only screen and (max-width: 375px) {
+  .widget {
+    width: 375px;
+    height: 302px;
+    background-image: url("/images/widget3.png");
+    @include background();
+    background-size: auto;
+    background-position: left bottom;
+    transform: translateY(-130px);
+
+    &__wrapp {
+      transform: translateY(70px);
+      width: 327px;
+      margin-left: 0;
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &__head {
+      width: 327px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &__btn {
+      margin: 0 auto;
+    }
+  }
+}

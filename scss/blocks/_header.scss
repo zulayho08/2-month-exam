@@ -1,0 +1,106 @@
+@import "../mixins/mixin";
+@import "../colors/colors";
+
+.header {
+  width: 1110px;
+  display: flex;
+  padding: 30px;
+  padding-top: 50px;
+  @include center();
+  margin-left: 150px;
+
+  &__list {
+    @include list();
+    margin-left: -500px;
+  }
+
+  &__list--item {
+    font-family: Livvic;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  &__link {
+    @include link();
+    margin-left: 50px;
+  }
+
+  &__link:active {
+    color: $pinkColor;
+  }
+
+  &__btn {
+    width: 153px;
+    height: 48px;
+    border: 2px solid $whiteColor;
+    border-radius: 25px;
+    text-align: center;
+    padding: 6px;
+  }
+
+  &__btn:active {
+    background-color: $whiteColor;
+  }
+
+  &__btn--link {
+    @include link();
+    font-family: Livvic;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0px;
+  }
+
+  &__btn--link:active {
+    color: $greenDark;
+  }
+
+  .burger {
+    display: none;
+  }
+}
+
+// TABLET
+
+@media only screen and (max-width: 768px) {
+  .header {
+    max-width: 689px;
+    margin-left: 15px;
+
+    &__list {
+      margin-left: -150px;
+    }
+
+    &__link {
+      margin-left: 30px;
+    }
+
+    .burger {
+      display: none;
+    }
+  }
+}
+
+// MOBILE
+
+@media only screen and (max-width: 375px) {
+  .header {
+    max-width: 327px;
+    margin-left: 0px;
+
+    &__list {
+      display: none;
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    .burger {
+      display: block;
+    }
+  }
+}

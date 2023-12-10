@@ -1,0 +1,169 @@
+@import "../colors/colors";
+
+.hero {
+  width: 1110px;
+  @include center();
+  margin-left: 170px;
+  padding-top: 50px;
+  padding-bottom: 200px;
+
+  &__head {
+    width: 535px;
+    font-family: Livvic;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 100px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .span {
+    color: $pinkColor;
+  }
+
+  &--bg {
+    width: 200px;
+    height: 200px;
+    background-image: url("/images/hero__bg.png");
+    @include background();
+    background-size: auto;
+    background-position: left;
+    transform: translateX(-190px);
+    margin-top: -250px;
+  }
+
+  &__right {
+    width: 445px;
+    height: 195px;
+  }
+
+  &__bg {
+    margin-top: 45px;
+    margin-left: 70px;
+    width: 358px;
+    height: 200px;
+    background-image: url("/images/disk-bottom.png");
+    @include background();
+    background-size: auto;
+    background-position: bottom;
+  }
+
+  &__hr {
+    border: none;
+    margin-left: -1px;
+    margin-bottom: 70px;
+    width: 50px;
+    height: 5px;
+    background-color: $blueColor;
+  }
+
+  &__text {
+    width: 445px;
+    font-family: Livvic;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}
+
+// TABLET
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    width: 683px;
+    height: 520px;
+    display: inline;
+
+    &__head {
+      margin: 0 auto;
+      width: 383px;
+      font-family: "Livvic";
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 56px;
+      letter-spacing: 0px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &--bg {
+      display: none;
+    }
+
+    &__hr {
+      display: none;
+    }
+
+    &__text {
+      margin-left: 140px;
+      width: 457px;
+      font-family: Livvic;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+
+    &__bg {
+      margin-top: -45px;
+      margin-left: 190px;
+      width: 358px;
+      height: 156px;
+      background-position: bottom center;
+    }
+  }
+}
+
+// MOBILE
+
+@media only screen and (max-width: 375px) {
+  .hero {
+    width: 327px;
+    display: inline;
+    margin-bottom: 100px;
+
+    &__head {
+      margin: 0 auto;
+      width: 283px;
+      font-family: Livvic;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 40px;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+
+    &--bg {
+      display: none;
+    }
+
+    &__right {
+      width: 327px;
+    }
+
+    &__hr {
+      display: none;
+    }
+
+    &__text {
+      margin-left: 0px;
+      width: 327px;
+      font-family: Livvic;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: 0px;
+    }
+
+    &__bg {
+      margin-top: -45px;
+      margin-left: -10px;
+      width: 358px;
+      height: 128px;
+      background-position: bottom center;
+    }
+  }
+}
